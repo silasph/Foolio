@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<% @random.each do |rf| %>
+    <div class="small-4 columns">
+        <div class="panel">
+            <%= image_tag rf.image.url(:medium) %>
+        </div>
+    </div>
+<% end %>
 
 
 <% @folios.each do |f| %>

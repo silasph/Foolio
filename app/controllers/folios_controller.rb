@@ -5,7 +5,7 @@ class FoliosController < ApplicationController
   # GET /folios.json
   def index
     @folios = Folio.all.order(id: :desc)
-    @random = Folio.all.order("RANDOM() LIMIT 3")
+    @random = Folio.random
 
     if params[:search]
       @folios = Folio.search(params[:search]).order("created_at DESC")

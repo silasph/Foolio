@@ -6,4 +6,8 @@ class Folio < ActiveRecord::Base
     where("title LIKE ?", "%#{search}%")
     where("description LIKE ?", "%#{search}%")
   end
+
+  def self.random
+    @random = Folio.all.order("RANDOM() LIMIT 3")
+  end
 end
