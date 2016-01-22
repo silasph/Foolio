@@ -1,21 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<% @random.each do |rf| %>
-    <div class="small-4 columns">
-        <div class="panel">
-            <%= image_tag rf.image.url(:medium) %>
-        </div>
-    </div>
-<% end %>
-
-
 <% @folios.each do |f| %>
-    <div class="small-3 columns">
+    <div class="small-12 columns">
 
       <%= link_to f do %>
           <div class="panel">
-            <h6><%= f.title %></h6>
-            <%= image_tag f.image.url(:thumb) %>
+            <%= image_tag f.image.url(:large) %>
+            <h3 class="panel-title"><%= f.title %></h3>
             <p><%= f.description %></p>
             <%= link_to "Ver", f %>
             <%= link_to "Editar", edit_folio_path(f) %>

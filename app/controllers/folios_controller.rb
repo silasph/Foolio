@@ -5,6 +5,7 @@ class FoliosController < ApplicationController
   # GET /folios.json
   def index
     @folios = Folio.all.order(id: :desc)
+
     @random = Folio.random
 
     if params[:search]
@@ -50,7 +51,7 @@ class FoliosController < ApplicationController
   def update
     respond_to do |format|
       if @folio.update(folio_params)
-        format.html { redirect_to @folio, notice: 'Folio was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Folio was successfully updated.' }
         format.json { render :show, status: :ok, location: @folio }
       else
         format.html { render :edit }

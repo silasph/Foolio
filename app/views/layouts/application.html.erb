@@ -9,7 +9,14 @@
 <body>
 <%= render 'nav' %>
 <div class="container" style="padding: 0 15%;">
-<%= yield %>
+    <div class="small-8 columns">
+        <%= yield %>
+    </div>
+    <div class="small-4 columns" style="margin-top: 20px;">
+      <div class="panel">
+        sidebar
+      </div>
+    </div>
 </div>
 </body>
 </html>
