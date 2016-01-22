@@ -1,0 +1,22 @@
+@import "foundation";
+
+body {background: #f1f1f1 !important;}
+body {background: #f1f1f1 !important;}
+.row {padding: 0 100px;}
+img {max-width: 100%;}
+
+.container {padding: 0 15%;}
+
+.panel {
+  background: #fff !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main-header {
+  background: url(http://p1.pichost.me/i/40/1635023.jpg);
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}

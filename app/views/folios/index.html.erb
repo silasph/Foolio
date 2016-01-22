@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<% @folios.each do |f| %>
+    <div class="small-3 columns">
+
+      <%= link_to f do %>
+          <div class="panel">
+            <h6><%= f.title %></h6>
+            <%= image_tag f.image.url(:thumb) %>
+            <p><%= f.description %></p>
+            <%= link_to "Ver", f %>
+            <%= link_to "Editar", edit_folio_path(f) %>
+          </div>
+      <% end %>
+
+
+
+    </div>
+<% end %>
+
+<br>
+
+<%= link_to 'New Folio', new_folio_path %>

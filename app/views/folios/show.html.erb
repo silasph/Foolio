@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @folio.title %>
+</p>
+
+<p>
+  <%= image_tag @folio.image.url(:medium) %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @folio.description %>
+</p>
+
+<%= link_to 'Edit', edit_folio_path(@folio) %> |
+<%= link_to 'Back', folios_path %>
